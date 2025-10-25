@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Daniela García - Desarrolladora de Software</title>
+        <meta name="author" content="Daniela García">
+        <meta name="description" content="Portafolio de Daniela García, estudiante de programación web especializada en desarrollo de páginas web con HTML, CSS y JavaScript.">
+        <meta name="keywords" content="desarrolladora, programación web, HTML, CSS, JavaScript, páginas web, portafolio, estudiante">
+        <title>Daniela García - Estudiante de Programación Web</title>
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <header>
@@ -21,8 +23,13 @@
                             <a href="#inicio" class="nav-link">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a href="projects.html"
-                                class="nav-link">Proyectos</a>
+                            <a href="projects.html" class="nav-link">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="services.html" class="nav-link">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a href="#sobre-mi" class="nav-link">Sobre mí</a>
@@ -36,54 +43,142 @@
         </header>
 
         <main>
-            <section id="inicio" class="hero">
+            <section id="inicio" class="hero hero-modern">
+                <div class="hero-background">
+                    <div class="hero-overlay"></div>
+                </div>
                 <div class="hero-content">
-                    <h1>Hola, soy Daniela García</h1>
-                    <h2>Desarrolladora de Software</h2>
-                    <p>Soy una apasionada desarrolladora de software con
-                        experiencia en crear soluciones digitales innovadoras.
-                        Me especializo en el desarrollo de aplicaciones web y
-                        móviles, siempre buscando aprender nuevas tecnologías y
-                        mejorar mis habilidades para ofrecer productos de
-                        calidad.</p>
-                    <p>Mi objetivo es crear software que no solo funcione bien,
-                        sino que también proporcione una excelente experiencia
-                        de usuario y resuelva problemas reales de manera
-                        eficiente.</p>
+                    <div class="hero-text">
+                        <h1>Hola, soy <span class="highlight">Daniela García</span></h1>
+                        <h2>Estudiante de Programación Web</h2>
+                        <p class="hero-description">Soy una estudiante apasionada por la programación web. Me especializo en crear páginas web usando HTML, CSS y JavaScript. Mi objetivo es aprender continuamente y crear sitios web que se vean bien y funcionen correctamente.</p>
+                        <div class="hero-buttons">
+                            <a href="projects.html" class="btn btn-primary">
+                                <i class="fas fa-code"></i>
+                                Ver Proyectos
+                            </a>
+                            <a href="services.html" class="btn btn-secondary">
+                                <i class="fas fa-cogs"></i>
+                                Mis Servicios
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1+</div>
+                            <div class="stat-label">Año Estudiando</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Proyectos Realizados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Lenguajes Aprendidos</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="proyectos" class="proyectos">
+            <section id="proyectos" class="projects-preview">
                 <div class="container">
-                    <h2>Proyectos</h2>
-                    <p>Aquí podrás ver algunos de mis proyectos más destacados.
-                        Próximamente agregaré más contenido.</p>
+                    <div class="section-header">
+                        <h2>Mis Proyectos Destacados</h2>
+                        <p>Algunos de los proyectos que he realizado mientras aprendo programación web</p>
+                    </div>
+                    <div class="projects-showcase">
+                        <div class="project-preview">
+                            <div class="project-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Sistema de Gestión de Ventas</h3>
+                            <p>Página web para administrar ventas usando HTML, CSS y JavaScript</p>
+                            <a href="projects.html" class="project-link">Ver Detalles <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="project-preview">
+                            <div class="project-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h3>Sistema de Encuestas</h3>
+                            <p>Página web interactiva para crear y responder encuestas</p>
+                            <a href="projects.html" class="project-link">Ver Detalles <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="section-cta">
+                        <a href="projects.html" class="btn btn-outline">
+                            <i class="fas fa-folder-open"></i>
+                            Ver Todos los Proyectos
+                        </a>
+                    </div>
                 </div>
             </section>
 
-            <section id="sobre-mi" class="sobre-mi">
+            <section id="sobre-mi" class="about-preview">
                 <div class="container">
-                    <h2>Sobre mí</h2>
-                    <p>Conoce más sobre mi experiencia y habilidades en el
-                        desarrollo de software.</p>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h2>Sobre Mí</h2>
+                            <p>Soy una estudiante de programación web apasionada por crear páginas web atractivas y funcionales. Mi objetivo es aprender continuamente y mejorar mis habilidades en HTML, CSS y JavaScript para crear sitios web que se vean profesionales y funcionen bien.</p>
+                            <div class="skills-preview">
+                                <div class="skill-tag">HTML5</div>
+                                <div class="skill-tag">CSS3</div>
+                                <div class="skill-tag">JavaScript</div>
+                                <div class="skill-tag">Responsive Design</div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Trabajemos Juntos
+                            </a>
+                        </div>
+                        <div class="about-visual">
+                            <div class="code-animation">
+                                <div class="code-line">
+                                    <span class="code-keyword">const</span> 
+                                    <span class="code-variable">daniela</span> 
+                                    <span class="code-operator">=</span> 
+                                    <span class="code-string">"Estudiante"</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-keyword">function</span> 
+                                    <span class="code-function">crearPagina</span>
+                                    <span class="code-bracket">()</span> 
+                                    <span class="code-bracket">{</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-keyword">return</span> 
+                                    <span class="code-string">"HTML + CSS + JS"</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-bracket">}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
 
         <footer>
             <div class="footer-content">
-                <p>&copy; 2024 Hecho por Daniela García</p>
+                <p>&copy; 2025 Hecho por Daniela García</p>
+                <div class="footer-links">
+                    <a href="terms.html" class="footer-link">Términos y Condiciones</a>
+                    <a href="contact.html" class="footer-link">Contacto</a>
+                </div>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i
-                            class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i
-                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/danielagarciajb/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/garciadaniela" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/danielagarciajb/" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>

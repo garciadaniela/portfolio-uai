@@ -1,9 +1,21 @@
+/* ========================================
+   PORTFOLIO DANIELA GARCÍA - JAVASCRIPT
+   ======================================== */
+
+/**
+ * Función para crear el header dinámicamente
+ * Solo se ejecuta si no existe un header estático en la página
+ * @returns {HTMLElement} Elemento header creado
+ */
 function createHeader() {
+    // Detectar la página actual para ajustar los enlaces de navegación
     const currentPage = window.location.pathname;
     const isIndexPage = currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/');
     const isProjectsPage = currentPage.includes('projects.html');
+    const isServicesPage = currentPage.includes('services.html');
     const isContactPage = currentPage.includes('contact.html');
 
+    // Crear elemento header con navegación
     const header = document.createElement('header');
     header.innerHTML = `
         <nav class="navbar">
@@ -17,6 +29,9 @@ function createHeader() {
                     </li>
                     <li class="nav-item">
                         <a href="${isProjectsPage ? '#' : 'projects.html'}" class="nav-link">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${isServicesPage ? '#' : 'services.html'}" class="nav-link">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a href="${isIndexPage ? '#sobre-mi' : 'index.html#sobre-mi'}" class="nav-link">Sobre mí</a>
@@ -35,12 +50,15 @@ function createFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = `
         <div class="footer-content">
-            <p>&copy; 2024 Hecho por Daniela García</p>
+            <p>&copy; 2025 Hecho por Daniela García</p>
+            <div class="footer-links">
+                <a href="terms.html" class="footer-link">Términos y Condiciones</a>
+                <a href="contact.html" class="footer-link">Contacto</a>
+            </div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/danielagarciajb/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/garciadaniela" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/danielagarciajb/" class="social-link"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     `;
@@ -48,11 +66,17 @@ function createFooter() {
 }
 
 function initPage() {
-    const header = createHeader();
-    document.body.insertBefore(header, document.body.firstChild);
+    // Solo agregar header si no existe uno estático
+    if (!document.querySelector('header')) {
+        const header = createHeader();
+        document.body.insertBefore(header, document.body.firstChild);
+    }
 
-    const footer = createFooter();
-    document.body.appendChild(footer);
+    // Solo agregar footer si no existe uno estático
+    if (!document.querySelector('footer')) {
+        const footer = createFooter();
+        document.body.appendChild(footer);
+    }
 
     addSmoothScrolling();
 }
