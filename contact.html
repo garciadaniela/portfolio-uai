@@ -4,11 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Daniela García">
-        <meta name="description" content="Contacta con Daniela García para proyectos de desarrollo web, WordPress personalizado y soluciones digitales. Formulario de contacto y información de contacto.">
-        <meta name="keywords" content="contacto, desarrolladora, proyectos web, WordPress, consultoría, desarrollo personalizado, Argentina">
+        <meta name="description" content="Contacta con Daniela García, desarrolladora Full Stack, para proyectos de software, desarrollo web completo y soluciones tecnológicas. Formulario de contacto.">
+        <meta name="keywords" content="contacto, desarrolladora full stack, proyectos software, consultoría técnica, desarrollo personalizado, Argentina">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="notranslate" content="no">
+        <meta name="rating" content="general">
+        <meta name="theme-color" content="#667eea">
+        <meta http-equiv="content-language" content="es">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Contacto - Daniela García">
+        <meta property="og:description" content="Contacta con Daniela García, desarrolladora Full Stack, para proyectos de software, desarrollo web completo y soluciones tecnológicas. Formulario de contacto.">
+        <meta property="og:type" content="website">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Contacto - Daniela García">
+        <meta name="twitter:description" content="Contacta con Daniela García, desarrolladora Full Stack, para proyectos de software, desarrollo web completo y soluciones tecnológicas. Formulario de contacto.">
         <title>Contacto - Daniela García</title>
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
@@ -37,7 +51,7 @@
                                 mí</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contacto</a>
+                            <a href="contact.html" class="nav-link">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -81,19 +95,6 @@
                                     <p>Argentina</p>
                                 </div>
                             </div>
-                            <div class="social-contact">
-                                <h4>Sígueme en redes sociales</h4>
-                                <div class="social-links">
-                                    <a href="#" class="social-link"><i
-                                            class="fab fa-linkedin"></i></a>
-                                    <a href="#" class="social-link"><i
-                                            class="fab fa-github"></i></a>
-                                    <a href="#" class="social-link"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a href="#" class="social-link"><i
-                                            class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="contact-form-container">
@@ -129,6 +130,7 @@
                                     <i class="fas fa-paper-plane"></i>
                                     Enviar mensaje
                                 </button>
+                                <p class="contact-feedback" id="contact-feedback" aria-live="polite"></p>
                             </form>
                         </div>
                     </div>
@@ -152,5 +154,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

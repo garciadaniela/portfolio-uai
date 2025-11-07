@@ -4,11 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Daniela García">
-        <meta name="description" content="Blog de Daniela García sobre programación web, HTML, CSS, JavaScript y aprendizaje de desarrollo web.">
-        <meta name="keywords" content="blog, programación web, HTML, CSS, JavaScript, desarrollo web, aprendizaje, tutoriales">
+        <meta name="description" content="Blog de Daniela García sobre desarrollo Full Stack, tecnologías modernas, mejores prácticas y experiencias profesionales en software.">
+        <meta name="keywords" content="blog, full stack, desarrollo web, Node.js, React, APIs, backend, frontend, best practices">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="notranslate" content="no">
+        <meta name="rating" content="general">
+        <meta name="theme-color" content="#667eea">
+        <meta http-equiv="content-language" content="es">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Blog - Daniela García">
+        <meta property="og:description" content="Blog de Daniela García sobre desarrollo Full Stack, tecnologías modernas, mejores prácticas y experiencias profesionales en software.">
+        <meta property="og:type" content="website">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Blog - Daniela García">
+        <meta name="twitter:description" content="Blog de Daniela García sobre desarrollo Full Stack, tecnologías modernas, mejores prácticas y experiencias profesionales en software.">
         <title>Blog - Daniela García</title>
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
@@ -32,6 +46,9 @@
                             <a href="blog.html" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
+                            <a href="index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="contact.html" class="nav-link">Contacto</a>
                         </li>
                     </ul>
@@ -43,51 +60,81 @@
             <section class="hero">
                 <div class="hero-content">
                     <h1>Mi Blog</h1>
-                    <h2>Artículos sobre Programación Web</h2>
-                    <p>Comparto mi experiencia aprendiendo programación web, consejos útiles y 
-                        tutoriales sobre HTML, CSS y JavaScript.</p>
+                    <h2>Bitácora de proyectos y aprendizajes</h2>
+                    <p>Documentación rápida de integraciones, mejoras y lecciones que surgen en el día a día construyendo soluciones digitales.</p>
                 </div>
             </section>
 
             <section class="blog-section">
                 <div class="container">
-                    <div class="blog-grid">
-                        <article class="blog-post">
-                            <div class="blog-image">
-                                <i class="fas fa-code"></i>
-                            </div>
+                    <div class="blog-grid" id="blog-posts-grid"></div>
+
+                    <template id="blog-post-template">
+                        <article class="blog-post" data-blog-post>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span class="blog-date">
                                         <i class="fas fa-calendar"></i>
-                                        15 de Enero, 2020
+                                        <span data-blog-date>Fecha</span>
                                     </span>
-                                    <span class="blog-category">HTML</span>
+                                    <span class="blog-category" data-blog-category>General</span>
                                 </div>
-                                <h3>Mi Primer Sitio Web con HTML</h3>
-                                <p>Comparto mi experiencia creando mi primera página web usando solo HTML. 
-                                   Aprendí sobre la estructura semántica y las etiquetas básicas que todo 
-                                   desarrollador web debe conocer.</p>
-                                <div class="blog-tags">
-                                    <span class="tag">HTML5</span>
-                                    <span class="tag">Semántica</span>
-                                    <span class="tag">Principiante</span>
+                                <h3 data-blog-title>Título del artículo</h3>
+                                <p data-blog-description>Descripción del artículo.</p>
+                                <div class="blog-tags" data-blog-tags></div>
+                                <div class="blog-author">
+                                    <i class="fas fa-user"></i>
+                                    <span data-blog-author>Autor/a</span>
                                 </div>
-                                <a href="#" class="blog-link">Leer más <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
-                    </div>
-
-                    <div class="blog-pagination">
-                        <button class="pagination-btn active">1</button>
-                        <button class="pagination-btn">2</button>
-                        <button class="pagination-btn">3</button>
-                        <span class="pagination-dots">...</span>
-                        <button class="pagination-btn">Siguiente</button>
-                    </div>
+                    </template>
                 </div>
             </section>
         </main>
+
+        <button type="button" class="blog-admin-trigger" id="blog-admin-trigger" aria-haspopup="dialog" aria-controls="blog-admin-modal">
+            <i class="fas fa-plus"></i>
+            <span>Agregar artículo</span>
+        </button>
+
+        <div class="blog-admin-modal" id="blog-admin-modal" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="blog-admin-dialog">
+                <button type="button" class="blog-admin-close" id="blog-admin-close" aria-label="Cerrar">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h3>Nueva entrada del blog</h3>
+                <p class="blog-admin-helper">Ingresá los datos para crear una nueva publicación. Solo usuarios con clave pueden acceder a este formulario.</p>
+                <form class="blog-admin-form" id="blog-admin-form" novalidate>
+                    <div class="form-row">
+                        <label for="admin-first-name">Nombre</label>
+                        <input id="admin-first-name" name="firstName" type="text" placeholder="Ej. Daniela" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="admin-last-name">Apellido</label>
+                        <input id="admin-last-name" name="lastName" type="text" placeholder="Ej. García" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="admin-subject">Título o asunto</label>
+                        <input id="admin-subject" name="subject" type="text" placeholder="Título de la publicación" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="admin-tags">Tags</label>
+                        <input id="admin-tags" name="tags" type="text" placeholder="Ej. Node.js, Integraciones, AWS" required>
+                        <small>Separá las tecnologías por coma (,)</small>
+                    </div>
+                    <div class="form-row">
+                        <label for="admin-description">Contenido</label>
+                        <textarea id="admin-description" name="description" rows="4" placeholder="Resumen del artículo" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Publicar</button>
+                        <button type="reset" class="btn-secondary" id="admin-clear">Limpiar</button>
+                    </div>
+                    <p class="blog-admin-feedback" id="blog-admin-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
 
         <footer>
             <div class="footer-content">
@@ -106,7 +153,8 @@
             </div>
         </footer>
 
-        <script src="script.js"></script>
+        <script src="data/blog-posts.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
 

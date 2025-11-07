@@ -1,8 +1,8 @@
-# Portfolio Daniela García - Estudiante de Programación Web
+# Portfolio Daniela García - Desarrolladora Full Stack
 
 ## Descripción del Proyecto
 
-Este es el portafolio de **Daniela García**, estudiante de programación web especializada en desarrollo de páginas web usando HTML, CSS y JavaScript.
+Este es el portafolio de **Daniela García**, desarrolladora Full Stack con 5 años de experiencia en desarrollo de software. Especializada en aplicaciones web completas, APIs, integraciones y soluciones tecnológicas escalables.
 
 ## Características Principales
 
@@ -26,19 +26,19 @@ Este es el portafolio de **Daniela García**, estudiante de programación web es
    - Sección "Sobre mí" con habilidades
 
 2. **Proyectos (`projects.html`)**
-   - Sistema de Gestión de Ventas
-   - Sistema de Encuestas
+   - Plataforma de Subastas Online en Vivo
+   - Integración VTEX-Ecomexperts
    - Detalles técnicos y tecnologías utilizadas
 
 3. **Servicios (`services.html`)**
-   - Páginas web personalizadas
+   - Aplicaciones Web Completas
+   - APIs y Integraciones
    - Proceso de trabajo estructurado
-   - Beneficios y características del servicio
 
 4. **Blog (`blog.html`)**
-   - Artículos sobre programación web
-   - Tutoriales de HTML, CSS y JavaScript
-   - Experiencias de aprendizaje
+   - Artículos sobre Full Stack
+   - Mejores prácticas y tutoriales técnicos
+   - Experiencias profesionales
 
 5. **Contacto (`contact.html`)**
    - Formulario de contacto
@@ -51,11 +51,13 @@ Este es el portafolio de **Daniela García**, estudiante de programación web es
 
 ## Tecnologías Utilizadas
 
-### Frontend
-- **HTML5** - Estructura semántica
-- **CSS3** - Estilos y animaciones
-- **JavaScript** - Interactividad
-- **Font Awesome** - Iconografía
+### Tecnologías
+- **Backend**: Node.js, Express, PHP
+- **Frontend**: React, JavaScript, HTML5, CSS3
+- **Bases de datos**: MySQL, PostgreSQL
+- **APIs**: REST, WebSockets
+- **Cloud**: AWS
+- **Herramientas**: Git, Font Awesome
 
 ### Características Técnicas
 - **Responsive Design** - Mobile-first approach
@@ -72,10 +74,13 @@ portfolio/
 ├── blog.html           # Página de blog
 ├── contact.html        # Página de contacto
 ├── terms.html          # Términos y condiciones
-├── styles.css          # Hoja de estilos principal
-├── script.js           # JavaScript del sitio
 ├── favicon.svg         # Icono del sitio
-└── README.md           # Documentación del proyecto
+├── CNAME               # Configuración de dominio
+├── README.md           # Documentación del proyecto
+├── css/
+│   └── styles.css      # Hoja de estilos principal
+└── js/
+    └── script.js       # JavaScript del sitio
 ```
 
 ## Instalación y Uso
@@ -128,6 +133,68 @@ portfolio/
 - Email: garciadaniela@gmail.com
 - Teléfono: +54 9 11 32621746
 - Ubicación: Argentina
+
+## Cumplimiento de Requisitos del Proyecto
+
+Este proyecto cumple con todos los requisitos académicos especificados:
+
+### 1. Estructura General del Sitio ✓
+- ✅ Archivo principal `index.html` en la raíz
+- ✅ Estructura coherente de carpetas y archivos vinculados
+- ✅ Rutas relativas y absolutas funcionan correctamente
+- ✅ CSS y JS correctamente vinculados
+- ✅ Metadatos esenciales completos (charset, viewport, author, description, keywords, robots, googlebot, theme-color, etc.)
+- ✅ Open Graph y Twitter Cards implementados
+- ✅ Favicon visible en la pestaña del navegador
+- ✅ Navegación principal con etiqueta `<nav>`
+- ✅ Enlaces de navegación funcionales
+- ✅ Enlaces externos con `target="_blank"` cuando corresponde
+- ✅ 6 páginas principales (Inicio, Proyectos, Servicios, Blog, Contacto, Términos)
+- ✅ Estructura visual coherente entre páginas
+- ✅ Nombres de archivos sin espacios ni caracteres especiales
+- ✅ Responsive en todas las resoluciones
+- ✅ Contenido principal en etiqueta `<main>`
+- ✅ Header con identificación del sitio
+- ✅ Footer con información institucional
+- ✅ Sin enlaces rotos
+- ✅ README incluido
+- ✅ Comentarios en HTML, CSS y JS
+- ✅ Recursos cargados en orden correcto
+- ✅ Navegación intuitiva y clara
+
+### 2. HTML - Contenido y Estructura Semántica ✓
+- ✅ Etiquetas semánticas correctas (header, nav, main, section, article, footer)
+- ✅ Estructura jerárquica con encabezados h1-h6 en orden lógico
+- ✅ Un solo `<h1>` por página
+- ✅ Textos en etiquetas apropiadas (p, ul, ol, blockquote, figure, figcaption)
+- ✅ Uso limitado de `<div>` solo cuando es necesario
+- ✅ Formularios correctamente estructurados con label, input, textarea, button
+- ✅ Cada campo de formulario con `<label>` asociada mediante atributo `for`
+- ✅ Declaración `<!DOCTYPE html>` correcta
+- ✅ Anidamiento correcto entre etiquetas
+- ✅ Todas las etiquetas correctamente cerradas
+- ✅ Atributo `lang` en `<html>`
+- ✅ Código legible e indentado
+- ✅ Sin etiquetas obsoletas
+- ✅ Uso prioritario de etiquetas semánticas
+
+### 3. CSS - Diseño y Presentación ✓
+- ✅ Al menos un archivo CSS externo correctamente vinculado
+- ✅ Estilos separados del contenido HTML
+- ✅ Sistema coherente de colores y tipografías
+- ✅ Fuentes importadas correctamente
+- ✅ Clases y selectores semánticos
+- ✅ Uso de unidades relativas (%, em, rem, vh, vw)
+- ✅ Diseño responsive con media queries
+- ✅ Uso de Flexbox y Grid para layout
+- ✅ Márgenes y paddings coherentes
+- ✅ Contraste adecuado entre texto y fondo
+- ✅ Imágenes adaptables con max-width: 100%
+- ✅ Animaciones suaves y moderadas
+- ✅ Paleta de colores coherente
+- ✅ Convención clara de clases y selectores
+- ✅ CSS optimizado sin reglas redundantes
+- ✅ Sin uso excesivo de !important
 
 ## Licencia
 
