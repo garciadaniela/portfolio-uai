@@ -8,14 +8,13 @@
  * @returns {HTMLElement} Elemento header creado
  */
 function createHeader() {
-    // Detectar la página actual para ajustar los enlaces de navegación
     const currentPage = window.location.pathname;
     const isIndexPage = currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/');
     const isProjectsPage = currentPage.includes('projects.html');
     const isServicesPage = currentPage.includes('services.html');
+    const isBlogPage = currentPage.includes('blog.html');
     const isContactPage = currentPage.includes('contact.html');
 
-    // Crear elemento header con navegación
     const header = document.createElement('header');
     header.innerHTML = `
         <nav class="navbar">
@@ -32,6 +31,9 @@ function createHeader() {
                     </li>
                     <li class="nav-item">
                         <a href="${isServicesPage ? '#' : 'services.html'}" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="${isBlogPage ? '#' : 'blog.html'}" class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a href="${isIndexPage ? '#sobre-mi' : 'index.html#sobre-mi'}" class="nav-link">Sobre mí</a>
